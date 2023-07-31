@@ -29,6 +29,16 @@ app.use("/api/v1", user);
 app.use("/api/v1", order);
 app.use("/api/v1",payment);
 app.use("/api/v1",category);
+app.get('/',(req,res)=>{
+    res.send(`<html>
+    <head>
+    <title>Pvh-house-backend</title>
+    </head>
+    <body style="display:flex; align-items:center,justify-content:center">
+    <h1>Welcome to Padmavati Handloom House</h1>
+    </body>
+    </html>`)
+})
 // app.post(
 //     '/contact',async(req,res)=>{
         
