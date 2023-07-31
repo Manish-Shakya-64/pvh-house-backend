@@ -19,7 +19,8 @@ const app = express();
 
 app.use(express.json({limit: '50mb'}));
 app.use(express.urlencoded({extended : true,limit: '50mb'}));
-app.use(cors({"Access-Control":"Allow-Origin"}))
+app.use(cors({
+    origin : ['http://localhost:3000'],credentials:true}))
 app.use(cookieParser());
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended:true}));
